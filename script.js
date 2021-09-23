@@ -16,16 +16,16 @@ generateBtn.addEventListener("click", writePassword);
 //generatePassword function
 function generatePassword() {
   // Asking user the requirements for password
-  var passwordLength = prompt("How many characters would you like the password to be?");
+  var passwordLength = window.prompt("How many characters would you like the password to be?");
   passwordLength = parseInt(passwordLength);
   if (passwordLength < 8) {
-    alert("Password must be more than 8 characters long."); //quitting out if user doesn't choose a long enough password
+    window.alert("Password must be more than 8 characters long."); //quitting out if user doesn't choose a long enough password
     return;
   } else if (passwordLength > 128) {
-    alert("Password must be more than 128 characters long."); //quitting out if user doesn't choose a short enough password
+    window.alert("Password must be more than 128 characters long."); //quitting out if user doesn't choose a short enough password
     return;
   } else if (!passwordLength) {
-    alert("Password must be at least 8 characters to 128 characters long."); //quitting out if user doesn't choose a length at all
+    window.alert("Password must be at least 8 characters to 128 characters long."); //quitting out if user doesn't choose a length at all
     return;
   }
 
@@ -99,10 +99,10 @@ function defaultCriteria(passwordLength) {
 
 function criteria(passwordLength) {
   //storing values of the requirements the user wants
-  var includeUpper = confirm("Should the password include uppercase characters?");
-  var includeLower = confirm("Should the password include lowercase characters?");
-  var includeNum = confirm("Should the password include numbers?");
-  var includeSpecial = confirm("Should the password include special characters (!@#$$%) ?");
+  var includeUpper = window.confirm("Should the password include uppercase characters?");
+  var includeLower = window.confirm("Should the password include lowercase characters?");
+  var includeNum = window.confirm("Should the password include numbers?");
+  var includeSpecial = window.confirm("Should the password include special characters (!@#$$%) ?");
 
   //catching if user doesn't choose a requirement
   if (!includeUpper && !includeLower && !includeNum && !includeSpecial) {
