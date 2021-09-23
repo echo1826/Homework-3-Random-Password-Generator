@@ -16,7 +16,7 @@ generateBtn.addEventListener("click", writePassword);
 //generatePassword function
 function generatePassword() {
   // Asking user the requirements for password
-  var passwordLength = window.prompt("How many characters would you like the password to be?");
+  var passwordLength = window.prompt("How many characters would you like the password to be (8-128)?");
   passwordLength = parseInt(passwordLength);
   if (passwordLength < 8) {
     window.alert("Password must be more than 8 characters long."); //quitting out if user doesn't choose a long enough password
@@ -87,6 +87,7 @@ function defaultCriteria(passwordLength) {
 
   //randomly choosing characters from password character pool to final password array then returning it
   //possible bug: doesn't guarantee the password meets the criteria the user wants: solved in the logic structure
+  //checks number of indexes so doesn't go over user set password length
   for (let i = 0; i < passwordLength - defaultCriteria; i++) {
     let randomIndex = Math.floor(Math.random() * passwordOption.length);
     generatedPassword.push(passwordOption[randomIndex]);
