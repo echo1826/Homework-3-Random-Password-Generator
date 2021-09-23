@@ -124,7 +124,7 @@ function criteria(passwordLength) {
 
 //shuffles elements in password array around
 function shuffleArray(password) {
-  for (let i = password.length - 1; i > 0; i--) {
+  for (let i = password.length - 1; i > 0; i--) { //starts from end of array
     let j = Math.floor(Math.random() * (i + 1)); //determines random index for password array
     let t = password[i]; //stores element of current index into variable
     password[i] = password[j]; //replaces current index element with random value inside array
