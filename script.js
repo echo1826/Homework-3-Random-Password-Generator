@@ -46,6 +46,7 @@ function defaultCriteria(passwordLength) {
   var defaultCriteria = 0;
 
   //adding uppercase characters to password character pool
+  //automatically adds a uppercase character to final password to have at least one character to pass criteria
   if (userObject.anyUpper === true) {
     for (let i = 0; i < alphaUpper.length; i++) {
       passwordOption = passwordOption.concat(alphaUpper[i]);
@@ -55,6 +56,7 @@ function defaultCriteria(passwordLength) {
   }
 
   //adding lowercase characters to password character pool
+  //automatically adds a lowercase character to final password to have at least one character to pass criteria
   if (userObject.anyLower) {
     for (let i = 0; i < alphaLower.length; i++) {
       passwordOption = passwordOption.concat(alphaLower[i]);
@@ -64,6 +66,7 @@ function defaultCriteria(passwordLength) {
   }
 
   //adding numbers characters to password character pool
+  //automatically adds a number character to final password to have at least one character to pass criteria
   if (userObject.anyNum) {
     for (let i = 0; i < numericals.length; i++) {
       passwordOption = passwordOption.concat(numericals[i]);
@@ -73,6 +76,7 @@ function defaultCriteria(passwordLength) {
   }
 
   //adding special characters to password character pool
+  //automatically adds a special character to final password to have at least one character to pass criteria
   if (userObject.anySpecial) {
     for (let i = 0; i < special.length; i++) {
       passwordOption = passwordOption.concat(special[i]);
@@ -82,7 +86,7 @@ function defaultCriteria(passwordLength) {
   }
 
   //randomly choosing characters from password character pool to final password array then returning it
-  //possible bug: doesn't guarantee the password meets the criteria the user wants
+  //possible bug: doesn't guarantee the password meets the criteria the user wants: solved in the logic structure
   for (let i = 0; i < passwordLength - defaultCriteria; i++) {
     let randomIndex = Math.floor(Math.random() * passwordOption.length);
     generatedPassword.push(passwordOption[randomIndex]);
