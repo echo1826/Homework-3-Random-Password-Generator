@@ -20,7 +20,7 @@ if (userObject.anyUpper === true) {
     generatedPassword.push(alphaUpper[Math.floor(Math.random() * alphaUpper.length)]);
     defaultCriteria++;
   }
-
+```
 
 ## Warning
 This password generated, although random, is not a good generator for secure passwords if you happen to come across this generator. Please search for a more secure
