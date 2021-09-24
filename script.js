@@ -93,9 +93,6 @@ function defaultCriteria(passwordLength) {
     generatedPassword.push(passwordOption[randomIndex]);
   }
 
-  //shuffles array since we gave default values in array to always meet user criteria
-  shuffleArray(generatedPassword);
-
   //changes array to a regular string then returns it
   generatedPassword = generatedPassword.join("");
 
@@ -127,12 +124,4 @@ function criteria(passwordLength) {
   return userChoices;
 }
 
-//shuffles elements in password array around
-function shuffleArray(password) {
-  for (let i = password.length - 1; i > 0; i--) { //starts from end of array
-    let j = Math.floor(Math.random() * (i + 1)); //determines random index for password array
-    let t = password[i]; //stores element of current index into variable
-    password[i] = password[j]; //replaces current index element with random value inside array
-  }
-}
 //default a character when the user makes the choice to include the character

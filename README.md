@@ -20,17 +20,7 @@ if (userObject.anyUpper === true) {
     generatedPassword.push(alphaUpper[Math.floor(Math.random() * alphaUpper.length)]);
     defaultCriteria++;
   }
-  ```
-which is a pretty "hacky" way as the array will always have an uppercase, lowercase, number, and/or special character in certain indexes. Thus I had to research shuffling
-algorithms and came across something called a Fisher-Yates shuffle:
-```javascript
-for (let i = password.length - 1; i > 0; i--) { 
-    let j = Math.floor(Math.random() * (i + 1)); 
-    let t = password[i]; 
-    password[i] = password[j];
-}
-```
-which just swaps the elements randomly starting from the end of array.
+
 
 ## Warning
 This password generated, although random, is not a good generator for secure passwords if you happen to come across this generator. Please search for a more secure
