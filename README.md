@@ -26,6 +26,12 @@ if (userObject.anyUpper === true) {
 This password generated, although random, is not a good generator for secure passwords if you happen to come across this generator. Please search for a more secure
 password generator.
 
+## Screenshot
+![Screenshot](screencapture-echo1826-github-io-Homework-3-Random-Password-Generator-2021-09-27-17_38_40.png)
+
+## Webpage link
+[Password Generator](https://echo1826.github.io/Homework-3-Random-Password-Generator/)
+
 ## Credits
 I want to thank my tutor, Andrew Kil, for giving my guidance and inspiration on this homework when I got stuck on trying to figure out a way to guarantee the password
 passes all criteria the user wants. I also want to thank my teacher and TAs for always being available as much as possible for questions.
