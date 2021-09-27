@@ -49,7 +49,7 @@ function defaultCriteria(passwordLength) {
   //automatically adds a uppercase character to final password to have at least one character to pass criteria
   if (userObject.anyUpper === true) {
     for (let i = 0; i < alphaUpper.length; i++) {
-      passwordOption = passwordOption.concat(alphaUpper[i]);
+      passwordOption = passwordOption.concat(alphaUpper);
     }
     generatedPassword.push(alphaUpper[Math.floor(Math.random() * alphaUpper.length)]);
     defaultCriteria++;
@@ -59,7 +59,7 @@ function defaultCriteria(passwordLength) {
   //automatically adds a lowercase character to final password to have at least one character to pass criteria
   if (userObject.anyLower) {
     for (let i = 0; i < alphaLower.length; i++) {
-      passwordOption = passwordOption.concat(alphaLower[i]);
+      passwordOption = passwordOption.concat(alphaLower);
     }
     generatedPassword.push(alphaLower[Math.floor(Math.random() * alphaLower.length)]);
     defaultCriteria++;
@@ -69,7 +69,7 @@ function defaultCriteria(passwordLength) {
   //automatically adds a number character to final password to have at least one character to pass criteria
   if (userObject.anyNum) {
     for (let i = 0; i < numericals.length; i++) {
-      passwordOption = passwordOption.concat(numericals[i]);
+      passwordOption = passwordOption.concat(numericals);
     }
     generatedPassword.push(numericals[Math.floor(Math.random() * numericals.length)]);
     defaultCriteria++;
@@ -79,7 +79,7 @@ function defaultCriteria(passwordLength) {
   //automatically adds a special character to final password to have at least one character to pass criteria
   if (userObject.anySpecial) {
     for (let i = 0; i < special.length; i++) {
-      passwordOption = passwordOption.concat(special[i]);
+      passwordOption = passwordOption.concat(special);
     }
     generatedPassword.push(special[Math.floor(Math.random() * special.length)]);
     defaultCriteria++;
